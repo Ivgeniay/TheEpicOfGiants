@@ -1,7 +1,7 @@
 public enum SceneEnum
 {
     BoostrapScene,
+    GamePlayScene,
     MainMenuScene,
-    MainScene,
     TestScene,
 }
