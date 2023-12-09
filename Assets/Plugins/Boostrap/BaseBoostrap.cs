@@ -14,11 +14,14 @@ namespace MainCore.Maintenance.Boostraper
 
         protected virtual void Awake()
         { 
-            RegisterServices(di);
-            ProxyRegistration(di);
-            di.Build();
+            if (!di.IsBuilded)
+            {
+                RegisterServices(di);
+                ProxyRegistration(di);
+                di.Build();
+            }
             if (isGlobalMonoInject) GlobalInject();
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         } 
 
         protected virtual void RegisterServices(DI di) {} 

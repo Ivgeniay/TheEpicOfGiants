@@ -5,16 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Boostap : BaseBoostrap
 {
-    [SerializeField] private SceneEnum nextScene;
+    [SerializeField] private SceneEnum mainMenuScene;
+    public bool isLoaded { get; private set; } = false;
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     private IEnumerator Start()
     {
-        yield return null;
-        SceneManager.LoadSceneAsync(nextScene.ToString(), LoadSceneMode.Single);
+        if (!isLoaded)
+        {
+            yield return null;
+            isLoaded = true;
+            SceneManager.LoadSceneAsync(mainMenuScene.ToString(), LoadSceneMode.Single);
+        }
     }
      
-    void Update()
-    {
-        
-    }
 }

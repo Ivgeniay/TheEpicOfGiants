@@ -12,7 +12,7 @@ namespace CodeBase.Core.Services
         [SerializeField] private UILayerDisposer layerDisposer;
         public override void RegisterServices(DI di)
         {
-            di.RegisterService().ByInstance<UILayerDisposer>(layerDisposer).AsProject().Build();
+            di.RegisterService().ByInstance<UILayerDisposer>(layerDisposer).AsProject().Done();
         }
     }
 }

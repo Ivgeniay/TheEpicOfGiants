@@ -14,10 +14,14 @@ namespace CodeBase.UI.Layers
 
         public void Construct(UILayerDisposer disposer) => 
             this.disposer = disposer;
-        
 
-        private void OnEnable() => disposer.RegisterLayer(this); 
-        private void OnDisable() => disposer.UnregisterLayer(this);
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+
+        private void OnEnable() => disposer?.RegisterLayer(this); 
+        private void OnDisable() => disposer?.UnregisterLayer(this);
 
         public void Enable(bool value)
         {

@@ -57,11 +57,6 @@ namespace MainCore.Maintenance.ServiceDI
             var type = monoScript.GetType();
             MethodInfo ctor;
 
-            if (type.Name == "CharacterGameStateComponent")
-            {
-
-            }
-
             try
             {
                 ctor = type.GetMethod("Construct", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
