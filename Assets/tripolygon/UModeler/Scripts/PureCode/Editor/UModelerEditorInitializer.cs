@@ -165,6 +165,8 @@ namespace TPUModelerEditor
             if (state == PlayModeStateChange.EnteredEditMode)
             {
                 UModeler.enableDelegate = true;
+
+                MenuItems.RefreshAll();
             }
 
             if (state == PlayModeStateChange.EnteredPlayMode || state == PlayModeStateChange.EnteredEditMode)

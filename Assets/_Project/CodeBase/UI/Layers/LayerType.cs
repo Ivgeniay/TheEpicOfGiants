@@ -10,6 +10,7 @@ namespace CodeBase.UI.Layers
     {
         MainLayer,
         RoleLayer,
-
+        HeroLayer,
+        TitanLayer,
     }
 }

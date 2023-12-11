@@ -13,7 +13,12 @@ namespace MainCore.Maintenance.Boostraper
         private DI di = new(); 
 
         protected virtual void Awake()
-        { 
+        {
+            PrepaireDI();
+        } 
+
+        public virtual void PrepaireDI()
+        {
             if (!di.IsBuilded)
             {
                 RegisterServices(di);
@@ -21,8 +26,8 @@ namespace MainCore.Maintenance.Boostraper
                 di.Build();
             }
             if (isGlobalMonoInject) GlobalInject();
-            //DontDestroyOnLoad(gameObject);
-        } 
+            //DontDestroyOnLoad(gameObject); 
+        }
 
         protected virtual void RegisterServices(DI di) {} 
 

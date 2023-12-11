@@ -8,12 +8,15 @@ namespace CodeBase.UI.Layers
     internal class UILayer : DiMonoBehaviour
     {
         [SerializeField] private LayerType layerType;
-        [SerializeField] private List<GameObject> parents = new();
-        UILayerDisposer disposer;
+        //[SerializeField] private List<GameObject> childrens = new();
+        private UILayerDisposer disposer;
         public LayerType LayerType { get {  return layerType; } }
 
-        public void Construct(UILayerDisposer disposer) => 
+        public void Construct(UILayerDisposer disposer)
+        {
             this.disposer = disposer;
+            disposer.RegisterLayer(this);
+        }
 
         protected override void Awake()
         {
@@ -25,9 +28,9 @@ namespace CodeBase.UI.Layers
 
         public void Enable(bool value)
         {
-            foreach (var item in parents)
-                item.SetActive(value);
-        } 
+            foreach (Transform child in gameObject.transform)
+                child?.gameObject.SetActive(value);
+        }
 
     }
 }

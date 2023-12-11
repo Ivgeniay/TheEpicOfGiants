@@ -13,14 +13,17 @@ public class Boostap : BaseBoostrap
         base.Awake();
     }
 
+    public void Boostrap()
+    {
+        PrepaireDI();
+        isLoaded = true;
+    }
+
     private IEnumerator Start()
     {
-        if (!isLoaded)
-        {
-            yield return null;
-            isLoaded = true;
-            SceneManager.LoadSceneAsync(mainMenuScene.ToString(), LoadSceneMode.Single);
-        }
+        yield return new WaitUntil(() => isLoaded);
+        isLoaded = true;
+        SceneManager.LoadSceneAsync(mainMenuScene.ToString(), LoadSceneMode.Single);
     }
      
 }

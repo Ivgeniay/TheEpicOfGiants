@@ -25,7 +25,13 @@ namespace CodeBase.Core
         private void Awake()
         {
             if (Core.Instance != this) Destroy(gameObject);
+            SceneManager.activeSceneChanged += OnActiveSceneChangedHandler;
             DontDestroyOnLoad(gameObject);
+        }
+
+        private void OnActiveSceneChangedHandler(Scene arg0, Scene arg1)
+        {
+            boostap.Boostrap();
         }
 
         private IEnumerator Start()
