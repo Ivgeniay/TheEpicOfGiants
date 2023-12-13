@@ -8,6 +8,7 @@ namespace CodeBase.UI.Layers
 {
     internal enum LayerType
     {
+        Connecting,
         MainLayer,
         RoleLayer,
         HeroLayer,

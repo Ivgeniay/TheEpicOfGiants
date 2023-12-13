@@ -10,9 +10,13 @@ namespace CodeBase.Core.Services
     internal class DIProxy : RegistrationServicesProxyBase
     {
         [SerializeField] private UILayerDisposer layerDisposer;
+        [SerializeField] private NetworkService networkDisposer;
+        [SerializeField] private SettingsService settingsService;
         public override void RegisterServices(DI di)
         {
             di.RegisterService().ByInstance<UILayerDisposer>(layerDisposer).AsProject().Done();
+            di.RegisterService().ByInstance<NetworkService>(networkDisposer).AsProject().Done();
+            di.RegisterService().ByInstance<SettingsService>(settingsService).AsProject().Done();
         }
     }
 }

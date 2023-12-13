@@ -8,7 +8,6 @@ namespace CodeBase.UI.Layers
     internal class UILayer : DiMonoBehaviour
     {
         [SerializeField] private LayerType layerType;
-        //[SerializeField] private List<GameObject> childrens = new();
         private UILayerDisposer disposer;
         public LayerType LayerType { get {  return layerType; } }
 

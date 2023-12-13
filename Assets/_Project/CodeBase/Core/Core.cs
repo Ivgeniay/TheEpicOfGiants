@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using MainCore.Maintenance.ServiceDI;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,7 @@ namespace CodeBase.Core
             if (Core.Instance != this) Destroy(gameObject);
             SceneManager.activeSceneChanged += OnActiveSceneChangedHandler;
             DontDestroyOnLoad(gameObject);
+
         }
 
         private void OnActiveSceneChangedHandler(Scene arg0, Scene arg1)
