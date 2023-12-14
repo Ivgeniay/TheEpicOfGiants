@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dafd0a8e9ee856a49bf432688899df59
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148690
+  packageName: RayFire for Unity
+  packageVersion: 1.63
+  assetPath: Assets/RayFire/Scripts/Components/RayfireBomb.cs
+  uploadId: 631147

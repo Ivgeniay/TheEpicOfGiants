@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 87ad0a38c3bb12644907fd977da7312d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 148690
+  packageName: RayFire for Unity
+  packageVersion: 1.63
+  assetPath: Assets/RayFire/Scripts/Classes/RFStatic.cs
+  uploadId: 631147
